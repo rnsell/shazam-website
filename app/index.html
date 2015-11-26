@@ -1,0 +1,154 @@
+<html ng-app="shazamApp">
+
+<head>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <!--Bootstrap cdn css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+  <!--bootstrap js-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <!--socket.io-->
+  <script src="./angular_modules/socket-io/socket.io.js"></script>
+
+
+  <!-- angular js -->
+  <script src="./angular_modules/angular/angular.js"></script>
+  <script src="./angular_modules/angular-socket-io-master/socket.js"></script>
+
+  <script src="app.js"></script>
+  <script src="./lib/controller/shazam.controller.js"></script>
+  <script src="./lib/shazamapps/shazamapps.class.js"></script>
+
+
+
+<!--
+  <script>
+    var socket = io("http://localhost", {
+      port: 80
+    });
+    var WEBSITE = {
+        billy: {
+          url: "http://i.imgur.com/Q0tqbp4.jpg",
+          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
+        },
+        shazam: {
+          url: "",
+          src: ""
+        }
+      },
+      DESKTOP = {
+        billy: {
+          url: "http://i.imgur.com/Q0tqbp4.jpg",
+          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
+        },
+        shazam: {
+          url: "",
+          src: ""
+        }
+      },
+      MOBILEAPP = {
+        billy: {
+          url: "http://i.imgur.com/Q0tqbp4.jpg",
+          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
+        },
+        shazam: {
+          url: "",
+          src: ""
+        }
+      },
+      HARDWARE = {
+        billy: {
+          url: "http://i.imgur.com/Q0tqbp4.jpg",
+          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
+        },
+        shazam: {
+          url: "",
+          src: ""
+        }
+      },
+      CONSOLE = {
+        billy: {
+          url: "http://i.imgur.com/Q0tqbp4.jpg",
+          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
+        },
+        shazam: {
+          url: "",
+          src: ""
+        }
+      };
+
+    function Shazam() {
+      var msg = {
+        location: "Website"
+      };
+      socket.emit("Shazam!", msg);
+    }
+
+    socket.on("Shazam!", function(shazamMessage) {
+      // console.log(shazamMessage);
+      // alert(JSON.stringify(shazamMessage));
+    });
+  </script>-->
+</head>
+
+<body>
+  <nav class="navbar navbar-default"></nav>
+  <div class="container" ng-controller = "shazam.controller">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12 text-center" >
+          <img ng-src="{{imgUrl}}" alt="Description" height="500px" width="300px"/>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-12 text-center" >
+          <button ng-click="shazam()" class="btn btn-primary btn-lg" style="margin:auto"> Shazam!</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">{{appState.WebsiteApp.shazamHeader}}</h2>
+        <p>{{appState.WebsiteApp.appDesc}}</p>
+        <p>Count: {{appState.WebsiteApp.count}}</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">{{appState.DesktopApp.shazamHeader}}</h2>
+        <p>{{appState.DesktopApp.appDesc}}</p>
+        <p>Count: {{appState.DesktopApp.count}}</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">{{appState.HardwareApp.shazamHeader}}</h2>
+        <p>{{appState.HardwareApp.appDesc}}</p>
+        <p>Count: {{appState.HardwareApp.count}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">{{appState.ConsoleApp.shazamHeader}}</h2>
+        <p>{{appState.ConsoleApp.appDesc}}</p>
+        <p>Count: {{appState.ConsoleApp.count}}</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">Enabled</h2>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">{{appState.MobileApp.shazamHeader}}</h2>
+        <p>{{appState.MobileApp.appDesc}}</p>
+        <p>Count: {{appState.MobileApp.count}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+</html>
