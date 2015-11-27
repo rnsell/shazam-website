@@ -3,16 +3,16 @@
 'use strict';
 
 (function () {
-  var shazamApp = angular.module('shazamApp', ['btford.socket-io']);
+  var shazamApp = angular.module('shazamApp', []);
 
-  shazamApp.factory('shazamSocket', function (socketFactory) {
-    // var myIoSocket = io.connect('http://localhost');
-    var myIoSocket = io.connect('http://secure-citadel-7581.herokuapp.com');
-
-    var mySocket = socketFactory({
-      ioSocket: myIoSocket
-    });
-
-    return mySocket;
-  });
+  // shazamApp.factory('shazamSocket', function (socketFactory) {
+  //   // var myIoSocket = io.connect('http://localhost');
+  //   var myIoSocket = io.connect('http://secure-citadel-7581.herokuapp.com');
+  //
+  //   var mySocket = socketFactory({
+  //     ioSocket: myIoSocket
+  //   });
+  //
+  //   return mySocket;
+  // });
 }());

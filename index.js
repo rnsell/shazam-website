@@ -5,7 +5,7 @@
 var express = require('express'),
   app = express(),
   http = require('http').Server(app),
-  port = process.env.PORT || 8080;
+  port = process.env.PORT || 8081;
 
 app.use(express.static('app'));
 
