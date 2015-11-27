@@ -1,4 +1,4 @@
-<html ng-app="shazamApp">
+<html>
 
 <head>
   <!-- Jquery -->
@@ -25,77 +25,9 @@
 
 
 
-<!--
-  <script>
-    var socket = io("http://localhost", {
-      port: 80
-    });
-    var WEBSITE = {
-        billy: {
-          url: "http://i.imgur.com/Q0tqbp4.jpg",
-          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
-        },
-        shazam: {
-          url: "",
-          src: ""
-        }
-      },
-      DESKTOP = {
-        billy: {
-          url: "http://i.imgur.com/Q0tqbp4.jpg",
-          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
-        },
-        shazam: {
-          url: "",
-          src: ""
-        }
-      },
-      MOBILEAPP = {
-        billy: {
-          url: "http://i.imgur.com/Q0tqbp4.jpg",
-          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
-        },
-        shazam: {
-          url: "",
-          src: ""
-        }
-      },
-      HARDWARE = {
-        billy: {
-          url: "http://i.imgur.com/Q0tqbp4.jpg",
-          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
-        },
-        shazam: {
-          url: "",
-          src: ""
-        }
-      },
-      CONSOLE = {
-        billy: {
-          url: "http://i.imgur.com/Q0tqbp4.jpg",
-          src: "http://haining-art.deviantart.com/art/SHAZAM-428959121"
-        },
-        shazam: {
-          url: "",
-          src: ""
-        }
-      };
-
-    function Shazam() {
-      var msg = {
-        location: "Website"
-      };
-      socket.emit("Shazam!", msg);
-    }
-
-    socket.on("Shazam!", function(shazamMessage) {
-      // console.log(shazamMessage);
-      // alert(JSON.stringify(shazamMessage));
-    });
-  </script>-->
 </head>
 
-<body>
+<body ng-app="shazamApp">
   <nav class="navbar navbar-default"></nav>
   <div class="container" ng-controller = "shazam.controller">
     <div class="jumbotron">
