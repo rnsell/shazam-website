@@ -10,22 +10,21 @@
     var socket = io("http://localhost:8080");
 
 
-    var WEBSITEAPP = "WebsiteApp",
-      shazamMsg = {
-        location: WEBSITEAPP
-      };
+    var shazamMsg = {
+      location: "websiteApp"
+    };
 
     $scope.appState = {};
     $scope.imgUrl = "";
     $scope.imgSrc = "";
     $scope.shazam = function () {
-      console.log("Emiitted Shazam");
+      // console.log("Emiitted Shazam");
       socket.emit("Shazam!", shazamMsg);
     };
 
     function onRefresh(newState) {
       $scope.$apply(function () {
-        console.log("Refresh called @" + new Date());
+        // console.log("Refresh called @" + new Date());
         var lastLocation = newState.lastEventSource;
 
         //Copy the app state
@@ -40,14 +39,14 @@
           $scope.imgUrl = $scope.appState[lastLocation].shazamImg;
           $scope.imgSrc = $scope.appState[lastLocation].shazamSrc;
         }
-        console.log($scope.appState);
-        console.log($scope.imgUrl);
-        console.log($scope.imgSrc);
+        // console.log($scope.appState);
+        // console.log($scope.imgUrl);
+        // console.log($scope.imgSrc);
       });
     }
 
     function onTransform(newState) {
-      console.log("Transform called @" + new Date());
+      // console.log("Transform called @" + new Date());
       // console.log(newState);
       onRefresh(newState);
       //Flicker Screen
@@ -55,7 +54,7 @@
 
     socket.on("Refresh!", onRefresh);
     socket.on("Transform!", onTransform);
-    socket.emit("WhatAmI!");
+    socket.emit("Who am I?");
   }
 
   app.controller('shazam.controller', ["$scope", ShazamController]);
