@@ -1,4 +1,4 @@
-# shazamjs-core
+# shazamjs-website
 
 ## Install
 Please run npm install after cloning the repo before running the application if your new to node.
