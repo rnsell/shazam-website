@@ -42,8 +42,8 @@
           <button ng-click="shazam()" class="btn btn-primary btn-lg" style="margin:auto"> Shazam!</button>
         </div>
       </div>
-
     </div>
+
     <div class="row">
       <div class="col-md-4 text-center" ng-style="appState.websiteApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
         <h2 class="text-center">{{appState.websiteApp.shazamHeader}}</h2>
@@ -68,9 +68,9 @@
         <p>Count: {{appState.consoleApp.count}}</p>
       </div>
       <div class="col-md-4 text-center">
-        <h2 class="text-center">Enabled</h2>
-        <p></p>
-        <p></p>
+        <h2 class="text-center">ShazamJs</h2>
+        <p>Author: Robert Sell</p>
+        <p>Twitter: @DukeOfNode</p>
       </div>
       <div class="col-md-4 text-center" ng-style="appState.mobileApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
         <h2 class="text-center">{{appState.mobileApp.shazamHeader}}</h2>
@@ -79,6 +79,8 @@
       </div>
     </div>
   </div>
+
+  <audio id="audio" src="./assets/shazam.transform.mp3" style="visibility: hidden"></audio>
 </body>
 
 
