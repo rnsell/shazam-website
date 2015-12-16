@@ -4,7 +4,8 @@
   "description": "Website for shazam socket app.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./lib/**/*.test.js"
+    "test": "mocha ./lib/**/*.test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,6 @@
   },
   "homepage": "https://github.com/rnsell/shazam-website#readme",
   "dependencies": {
-    "express": "^4.13.3",
-    "socket.io": "^1.3.7",
-    "socket.io-client": "^1.3.7"
+    "express": "^4.13.3"
   }
 }
