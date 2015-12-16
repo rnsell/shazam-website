@@ -8,7 +8,7 @@
 
   function ShazamController($scope) {
     //Heroku instance that is live;
-    var socket = io("http://rocky-spire-6450.herokuapp.com/");
+    var socket = io("https://rocky-spire-6450.herokuapp.com/");
     // var socket = io("http://localhost:8080");
 
 
