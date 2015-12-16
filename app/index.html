@@ -50,16 +50,17 @@
         <p>{{appState.websiteApp.appDesc}}</p>
         <p>Count: {{appState.websiteApp.count}}</p>
       </div>
+      <div class="col-md-4 text-center">
+        <h2 class="text-center">ShazamJs</h2>
+        <p>Author: Robert Sell</p>
+        <p>Twitter: @DukeOfNode</p>
+      </div>
       <div class="col-md-4 text-center" ng-style="appState.desktopApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
         <h2 class="text-center">{{appState.desktopApp.shazamHeader}}</h2>
         <p>{{appState.desktopApp.appDesc}}</p>
         <p>Count: {{appState.desktopApp.count}}</p>
       </div>
-      <div class="col-md-4 text-center" ng-style="appState.hardwareApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
-        <h2 class="text-center">{{appState.hardwareApp.shazamHeader}}</h2>
-        <p>{{appState.hardwareApp.appDesc}}</p>
-        <p>Count: {{appState.hardwareApp.count}}</p>
-      </div>
+
     </div>
     <div class="row">
       <div class="col-md-4 text-center" ng-style="appState.consoleApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
@@ -67,10 +68,10 @@
         <p>{{appState.consoleApp.appDesc}}</p>
         <p>Count: {{appState.consoleApp.count}}</p>
       </div>
-      <div class="col-md-4 text-center">
-        <h2 class="text-center">ShazamJs</h2>
-        <p>Author: Robert Sell</p>
-        <p>Twitter: @DukeOfNode</p>
+      <div class="col-md-4 text-center" ng-style="appState.hardwareApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
+        <h2 class="text-center">{{appState.hardwareApp.shazamHeader}}</h2>
+        <p>{{appState.hardwareApp.appDesc}}</p>
+        <p>Count: {{appState.hardwareApp.count}}</p>
       </div>
       <div class="col-md-4 text-center" ng-style="appState.mobileApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
         <h2 class="text-center">{{appState.mobileApp.shazamHeader}}</h2>

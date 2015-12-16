@@ -32,5 +32,5 @@ app.get('/', function (req, res) {
 
 
 http.listen(port, function () {
-  console.log("Connected to port " + port);
+  console.log("Running on port " + port);
 });
