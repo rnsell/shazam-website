@@ -7,7 +7,9 @@
   var app = angular.module("shazamApp");
 
   function ShazamController($scope) {
-    var socket = io("http://localhost:8080");
+    //Heroku instance that is live;
+    var socket = io("http://rocky-spire-6450.herokuapp.com/");
+    // var socket = io("http://localhost:8080");
 
 
     var shazamMsg = {
